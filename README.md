@@ -47,15 +47,34 @@ Admins can view all transactions from a secure dashboard.
 ##  Project Structure
 ```text
 app/
- ├── Http/Controllers/
- ├── Models/
- ├── Services/   # Payment & blockchain logic
+├── Http/
+│ ├── Controllers/
+│ │ ├── PaymentController.php
+│ │ └── Admin/TransactionController.php
+│ ├── Requests/
+│ │ └── StoreTransactionRequest.php
+├── Models/
+│ └── Transaction.php
+├── Services/
+│ ├── CryptoPriceService.php
+│ ├── BnbPaymentService.php
+│ └── SolanaPaymentService.php
+
+
 resources/
- ├── views/
- ├── js/
+├── views/
+│ ├── payment/
+│ │ └── checkout.blade.php
+│ └── admin/
+│ └── transactions.blade.php
+├── js/
+│ ├── bnb-wallet.js
+│ └── solana-wallet.js
+
+
 routes/
- ├── web.php
- ├── api.php
+├── web.php
+└── api.php
 ````
 
 

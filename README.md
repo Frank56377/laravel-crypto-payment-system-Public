@@ -99,7 +99,25 @@ php artisan serve
 * Wallet-based transactions only
 * Server-side validation enabled
 
+## System Flow
 
+User
+  ↓
+Payment Form (Units / Amount)
+  ↓
+Frontend Validation
+  ↓
+Wallet Connection (MetaMask / Phantom)
+  ↓
+Blockchain Transaction (BNB / Solana)
+  ↓
+Server-side Verification (Laravel)
+  ↓
+Database Logging (MySQL)
+  ↓
+Admin Dashboard (View & Manage Transactions)
+
+This flow demonstrates a real-world crypto payment lifecycle, focusing on security, verification, and backend reliability.
 
 ##  Roadmap
 
